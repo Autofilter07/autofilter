@@ -12,18 +12,18 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '26080297'))
-API_HASH = environ.get('API_HASH', 'aed794c1dba398fba1e1e27e8b938d45')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6020243478:AAEnN2P5UA1azPRb4leq56ASDNbL9z_YaUI')
+API_ID = int(environ.get('API_ID', '29633565'))
+API_HASH = environ.get('API_HASH', '15a15731cf24425b9515ebf0a5993aa3')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6572691360:AAFUZHGBxJlYCQ-RooxvVc-fjpVttDerjZU')
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://graph.org/file/ab376e93ce0dc2c89a5f1.jpg https://graph.org/file/f03b2661bfa9739c69fe4.jpg https://graph.org/file/1a9e960bbeaed3bb08210.jpg https://graph.org/file/54bb07df32fedb7e9c965.jpg https://graph.org/file/29e2630452eb9a4df38a7.jpg https://graph.org/file/a354ca0628a7fb6d7dc4b.jpg https://graph.org/file/158ed44a118709b730c0a.jpg https://graph.org/file/b7e51667baa728ca812be.jpg https://graph.org/file/bf41c9a3e3fc0146b2cbf.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5943365408').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5082678993').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5943365408').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5082678993').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL','-1001840800400')
 auth_grp = environ.get('AUTH_GROUP','6020243478')
@@ -31,12 +31,13 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://movie:movie@cluster0.4e6yp3n.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://advance: advance@cluster0.pr6owtk.mongodb.net/?retryWrites=true&w=majority
+")
 DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001878145273'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001879756964'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Autofilter9_bot')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
@@ -48,7 +49,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001838506187')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001863075757')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
@@ -72,5 +73,5 @@ if AUTO_DELETE == "True":
 
 #Sample
 SHORTNER_SITE = environ.get('URL_SHORTNER_SITE','omegalinks.in')
-SHORTNER_API = environ.get('URL_SHORTNER_API','9cd702e495f6391ac80b8ce81fc3100c62afa43f')
+SHORTNER_API = environ.get('URL_SHORTNER_API','ffebcc17c13c132d75bdbe0a840e14e34daed9f8')
 
